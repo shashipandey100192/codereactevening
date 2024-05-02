@@ -1,0 +1,20 @@
+.first
+{
+    font-size: 50px;
+    color:red;
+    background-color: aqua;
+    text-align: center;
+}
+.page
+{
+    width: 1200px;
+    height: 800px;
+    background-color: azure;
+    border:1px solid red;
+}
+*{
+    margin:0 auto;
+    padding:0;
+}
+
+

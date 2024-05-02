@@ -5,7 +5,7 @@ function Home()
 {
     return( 
     <div className="page">
-        <h1 className="first">This is Home Page</h1>
+        <h1 className="first">This is Home PageThis is Home Page This is Home PageThis is Home PageThis is Home PageThis is Home Page</h1>
         <h2>dsfsdf</h2>
         <p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
 

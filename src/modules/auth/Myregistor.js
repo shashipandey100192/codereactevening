@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 function Myregistor() {
   return (
     <div className='container p-5'>
@@ -39,6 +39,7 @@ function Myregistor() {
                 <div class="mb-3">
                     <input type='button' className='btn btn-success ms-4' value="submit"/>
                     <input type='reset' className='btn btn-danger ms-5' value="cancel"/>
+                    <Link to='/' className='ms-5'>User Login</Link>
                 </div>
         </div>
         </div>

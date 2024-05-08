@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Mylogin() {
   return (
@@ -16,8 +17,8 @@ function Mylogin() {
                     <input type="password" class="form-control" placeholder='password'/>
                 </div>
                 <div class="mb-3">
-                    <input type='button' className='btn btn-success' value="submit"/>
-                    <a href='#' className='ms-5'>New User Registor</a>
+                    <Link  className='btn btn-success' to="landing">Login</Link>
+                    <Link to='registor' className='ms-5'>New User Registor</Link>
                 </div>
         </div>
         </div>

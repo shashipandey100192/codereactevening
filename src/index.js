@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+import "./pages/style.css";
 import Mylogin from './modules/auth/Mylogin';
 import Myregistor from './modules/auth/Myregistor';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Mylanding from './modules/dashboard/Mylanding';
 import Myabout from './modules/dashboard/Myabout';
 import Myhome from './modules/dashboard/Myhome';
+import Myservicedashboard from './modules/dashboard/services/Myservicedashboard';
+import Myemp from './modules/dashboard/services/Myemp';
 
 
 
@@ -24,8 +26,9 @@ root.render(
         <Route path='landing' element={<Mylanding/>}>
             <Route path='' element={<Myhome/>}></Route>
             <Route path='about' element={<Myabout/>}></Route>
-
-
+            <Route path='myservice' element={<Myservicedashboard/>}>
+              <Route path='' element={<Myemp/>}/>
+            </Route>
         </Route>
       </Routes>
      </BrowserRouter>

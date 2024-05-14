@@ -17,17 +17,19 @@ function Mynavbar() {
                         <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to="about">About</Link>
                         </li>
-                        <li className="nav-item dropdown">
+                        <li className="nav-item">
+                        <Link className="nav-link active" aria-current="page" to="myservice">Service</Link>
+                        </li>
+                        {/* <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Service
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                <li><a className="dropdown-item" href="#">Leptop</a></li>
+                                <li><a className="dropdown-item" href="#">Mobile</a></li>
+                                <li><Link className="dropdown-item" to="emp">Employment</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
                        
                     </ul>
                     <form className="d-flex" role="search">

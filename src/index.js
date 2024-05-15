@@ -11,6 +11,7 @@ import Myabout from './modules/dashboard/Myabout';
 import Myhome from './modules/dashboard/Myhome';
 import Myservicedashboard from './modules/dashboard/services/Myservicedashboard';
 import Myemp from './modules/dashboard/services/Myemp';
+import Myfetchfunc from './modules/dashboard/services/Myfetchfunc';
 
 
 
@@ -28,6 +29,7 @@ root.render(
             <Route path='about' element={<Myabout/>}></Route>
             <Route path='myservice' element={<Myservicedashboard/>}>
               <Route path='' element={<Myemp/>}/>
+              <Route path='allemp' element={<Myfetchfunc/>}/>
             </Route>
         </Route>
       </Routes>

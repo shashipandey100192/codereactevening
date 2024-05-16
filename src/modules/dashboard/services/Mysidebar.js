@@ -14,8 +14,8 @@ function Mysidebar() {
                     </button>
                     <div className="collapse show" id="home-collapse">
                         <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><Link to="allemp" className="link-body-emphasis d-inline-flex text-decoration-none rounded">All Emps</Link></li>
-                            <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">new Emp</a></li>
+                            <li><Link to="allemp" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Fetch API</Link></li>
+                            <li><Link to="axiosapi" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Axios API</Link></li>
                             <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Update Emp Details</a></li>
                             <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Report Card</a></li>
                         </ul>

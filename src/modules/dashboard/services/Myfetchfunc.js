@@ -1,44 +1,48 @@
 import React, { useEffect, useState } from 'react'
 
 function Myfetchfunc() {
-const [mydata,myfunc]=useState([])
+    const [mydata, myfunc] = useState([])
 
-    const myfetchapi=()=>
-    {
-        fetch('https://jsonplaceholder.typicode.com/photos').then((d)=>{
+    const myfetchapi = () => {
+        fetch('https://jsonplaceholder.typicode.com/posts').then((d) => {
             // console.log(d.json());
             return d.json();
-        }).then((a)=>{
+        }).then((a) => {
             console.log(a);
             myfunc(a);
         })
-      
+
     }
 
-useEffect(()=>{
-    myfetchapi()
-},[])
+    useEffect(() => {
+        myfetchapi()
+    }, [])
 
 
-  return (
-    <div className='container-fluid cusmt'>
-    <div className='row'>
-        <div className='col-6'>use of Fetch methods</div>
-            
-    </div>
-    <div className='row'>
-       
-            {mydata.map((d)=>{
-                return(
-                    <div className='col-md-2'>
-                    <img src={d.url} alt='sdjfksjdf' className='img-fluid'/>
-                    </div>
-                )
-            })}
+    return (
+        <div className='container-fluid cusmt'>
+            <div className='row'>
+                <div className='col-12 bg-info'> <h1>use of Fetch methods react js</h1></div>
+
+            </div>
+            <div className='row'>
+
+                {mydata.map((d) => {
+                    return (
+                        <div className='col-md-4 mt-3'>
+                            <div className='card p-3 shadow bg-light'>
+                                <h2>{d.id}</h2>
+                                <h5>{d.title}</h5>
+                                <hr/>
+                                <p>{d.body}</p>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+
         </div>
-   
-    </div>
-  )
+    )
 }
 
 export default Myfetchfunc

@@ -12,6 +12,7 @@ import Myhome from './modules/dashboard/Myhome';
 import Myservicedashboard from './modules/dashboard/services/Myservicedashboard';
 import Myemp from './modules/dashboard/services/Myemp';
 import Myfetchfunc from './modules/dashboard/services/Myfetchfunc';
+import Myaxiosapi from './modules/dashboard/services/Myaxiosapi';
 
 
 
@@ -30,6 +31,7 @@ root.render(
             <Route path='myservice' element={<Myservicedashboard/>}>
               <Route path='' element={<Myemp/>}/>
               <Route path='allemp' element={<Myfetchfunc/>}/>
+              <Route path='axiosapi' element={<Myaxiosapi/>}/>
             </Route>
         </Route>
       </Routes>

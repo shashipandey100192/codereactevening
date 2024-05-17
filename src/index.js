@@ -13,6 +13,10 @@ import Myservicedashboard from './modules/dashboard/services/Myservicedashboard'
 import Myemp from './modules/dashboard/services/Myemp';
 import Myfetchfunc from './modules/dashboard/services/Myfetchfunc';
 import Myaxiosapi from './modules/dashboard/services/Myaxiosapi';
+import Mychartpage from './modules/dashboard/Mychart';
+
+
+
 
 
 
@@ -33,6 +37,7 @@ root.render(
               <Route path='allemp' element={<Myfetchfunc/>}/>
               <Route path='axiosapi' element={<Myaxiosapi/>}/>
             </Route>
+            <Route path='charts' element={<Mychartpage/>}></Route>
         </Route>
       </Routes>
      </BrowserRouter>

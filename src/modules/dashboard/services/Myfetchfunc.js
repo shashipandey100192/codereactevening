@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Myfetchfunc() {
     const [mydata, myfunc] = useState([])
@@ -35,6 +36,7 @@ function Myfetchfunc() {
                                 <h5>{d.title}</h5>
                                 <hr/>
                                 <p>{d.body}</p>
+                                <Link to={`view/`+d.id} className='btn btn-success btn-sm'>Details</Link>
                             </div>
                         </div>
                     )

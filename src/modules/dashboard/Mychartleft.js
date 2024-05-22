@@ -57,6 +57,46 @@ function Mychartleft(props) {
     return (
         <div className='border shadow rounded p-3'>
             <h5>disply: {props.arjun}</h5>
+            <div className='container-fluid'>
+                <div className='row'>
+                    <div className='col-md-3'>
+                        <select className='form-control'>
+                            {props.dropdata.map((d) => {
+                                return (
+                                    <option>{d.id}</option>
+                                )
+                            })}
+                        </select>
+                    </div>
+                    <div className='col-md-3'>
+                        <select className='form-control'>
+                            {props.dropdata.map((d) => {
+                                return (
+                                    <option>{d.title}</option>
+                                )
+                            })}
+                        </select>
+                    </div>
+                    <div className='col-md-3'>
+                        <select className='form-control'>
+                            {props.dropdata.map((d) => {
+                                return (
+                                    <option>{d.userId}</option>
+                                )
+                            })}
+                        </select>
+                    </div>
+                    <div className='col-md-3'>
+                        <select className='form-control'>
+                            {props.dropdata.map((d) => {
+                                return (
+                                    <option>{d.body}</option>
+                                )
+                            })}
+                        </select>
+                    </div>
+                </div>
+            </div>
             <BarChart
                 width={800}
                 height={300}

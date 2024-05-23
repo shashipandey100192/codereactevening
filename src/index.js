@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{lazy,Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
@@ -15,6 +15,9 @@ import Myfetchfunc from './modules/dashboard/services/Myfetchfunc';
 import Myaxiosapi from './modules/dashboard/services/Myaxiosapi';
 import Mychartpage from './modules/dashboard/Mychart';
 import Productdetails from './modules/dashboard/services/Productdetails';
+import Myerropage from './modules/dashboard/Myerropage';
+// import Mylazylodingpage from './modules/dashboard/Mylazylodingpage';
+const Mylazylodingpage = lazy(()=>import('./modules/dashboard/Mylazylodingpage'));
 
 
 
@@ -34,13 +37,17 @@ root.render(
             <Route path='' element={<Myhome/>}></Route>
             <Route path='about' element={<Myabout/>}></Route>
             <Route path='myservice' element={<Myservicedashboard/>}>
-              <Route path='' element={<Myemp/>}/>
-              <Route path='allemp' element={<Myfetchfunc/>}/>
-              <Route path='allemp/view/:id' element={<Productdetails/>}/>
-              <Route path='axiosapi' element={<Myaxiosapi/>}/>
+                <Route path='' element={<Myemp/>}/>
+                <Route path='allemp' element={<Myfetchfunc/>}/>
+                <Route path='allemp/view/:id' element={<Productdetails/>}/>
+                <Route path='axiosapi' element={<Myaxiosapi/>}/>
             </Route>
             <Route path='charts' element={<Mychartpage/>}></Route>
+            <Route path='lazypage' element={<Suspense fallback={<h1 className='myloading'>Loading......</h1>}>
+              <Mylazylodingpage/>
+            </Suspense>}/>
         </Route>
+        <Route path='*' element={<Myerropage/>}/>
       </Routes>
      </BrowserRouter>
       

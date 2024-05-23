@@ -70,3 +70,14 @@
     overflow-y: auto;
   }
   
+  .myloading
+  {
+    color:red;
+    background-color: blue;
+    padding:100px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    
+  }

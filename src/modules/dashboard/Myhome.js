@@ -1,9 +1,25 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
 import Mycard from './Mycard';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 function Myhome() {
+
+    const [x, y] = useState([]);
+
+    const myjsondata = () => {
+        axios.get('http://localhost:5500/users').then((d) => {
+            y(d.data);
+            // console.log(d);
+        })
+    }
+
+    useEffect(() => {
+        myjsondata();
+    }, [])
+
+
     return (
         <div className='container-fluid mt-5 cusmt'>
             <div className='row'>
@@ -54,21 +70,62 @@ function Myhome() {
                 </div>
             </div>
             <div className='row'>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
-                <Mycard></Mycard>
+                <div className='card shadow'>
+                    <h4>Json server Data</h4>
+                    <hr />
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">sno</th>
+                                <th scope="col">Key</th>
+                                <th scope="col">Client Name</th>
+                                <th scope="col">Phone No</th>
+                                <th scope="col">Email id</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">username</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {x.map((d) => {
+                                return (
+                                    <tr>
+                                        <th scope="row">101</th>
+                                        <td>Mark</td>
+                                        <td>{d.username}</td>
+                                        <td>{d.phoneno}</td>
+                                        <td>{d.email}</td>
+                                        <td>{d.gender}</td>
+                                        <td>{d.loginuser}</td>
+                                        <td>
+                                            <Link to="" className='btn btn-danger btn-sm'>View</Link>
+                                            <Link to="" className='btn btn-danger btn-sm'>Edit</Link>
+                                            <Link to="" className='btn btn-danger btn-sm'>Del</Link>
+                                        </td>
+                                    </tr>
+                                )
+                            })}
 
 
+
+                        </tbody>
+                    </table>
+
+
+
+
+                </div>
+            </div>
+            <div className='row'>
+                <Mycard></Mycard>
+                <Mycard></Mycard>
+                <Mycard></Mycard>
+                <Mycard></Mycard>
+                <Mycard></Mycard>
+                <Mycard></Mycard>
+                <Mycard></Mycard>
+                <Mycard></Mycard>
             </div>
         </div>
     )

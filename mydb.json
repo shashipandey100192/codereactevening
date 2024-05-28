@@ -1,50 +1,58 @@
 {
-    "users":[
-        {
-            "id":1,
-            "username":"kumar",
-            "email":"kumar@gmail.com",
-            "phoneno":"454545454",
-            "gender":"mail",
-            "loginuser":"kumar123",
-            "loginpass":"123456"
-        },
-        {
-            "id":2,
-            "username":"kumar",
-            "email":"kumar@gmail.com",
-            "phoneno":"454545454",
-            "gender":"mail",
-            "loginuser":"kumar123",
-            "loginpass":"123456"
-        },
-        {
-            "id":3,
-            "username":"kumar",
-            "email":"kumar@gmail.com",
-            "phoneno":"454545454",
-            "gender":"mail",
-            "loginuser":"kumar123",
-            "loginpass":"123456"
-        },
-        {
-            "id":4,
-            "username":"kumar",
-            "email":"kumar@gmail.com",
-            "phoneno":"454545454",
-            "gender":"mail",
-            "loginuser":"kumar123",
-            "loginpass":"123456"
-        },
-        {
-            "id":5,
-            "username":"kumar",
-            "email":"kumar@gmail.com",
-            "phoneno":"454545454",
-            "gender":"mail",
-            "loginuser":"kumar123",
-            "loginpass":"123456"
-        }
-
-    ]
+  "users": [
+    {
+      "id": "1",
+      "username": "kumar",
+      "email": "kumar@gmail.com",
+      "phoneno": "454545454",
+      "gender": "mail",
+      "loginuser": "kumar123",
+      "loginpass": "123456"
+    },
+    {
+      "id": "2",
+      "username": "kumar",
+      "email": "kumar@gmail.com",
+      "phoneno": "454545454",
+      "gender": "mail",
+      "loginuser": "kumar123",
+      "loginpass": "123456"
+    },
+    {
+      "id": "3",
+      "username": "kumar",
+      "email": "kumar@gmail.com",
+      "phoneno": "454545454",
+      "gender": "mail",
+      "loginuser": "kumar123",
+      "loginpass": "123456"
+    },
+    {
+      "id": "4",
+      "username": "kumar",
+      "email": "kumar@gmail.com",
+      "phoneno": "454545454",
+      "gender": "mail",
+      "loginuser": "kumar123",
+      "loginpass": "123456"
+    },
+    {
+      "id": "5",
+      "username": "kumar",
+      "email": "kumar@gmail.com",
+      "phoneno": "454545454",
+      "gender": "mail",
+      "loginuser": "kumar123",
+      "loginpass": "123456"
+    },
+    {
+      "id": "1c7e",
+      "username": "ravi",
+      "phone": "888888888",
+      "email": "kumar@gmail.com",
+      "gender": "Female",
+      "pass": "444444444",
+      "repass": "4444444"
+    }
+  ]
 }

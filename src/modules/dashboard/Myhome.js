@@ -77,38 +77,30 @@ function Myhome() {
                         <thead>
                             <tr>
                                 <th scope="col">sno</th>
-                                <th scope="col">Key</th>
-                                <th scope="col">Client Name</th>
+                                <th scope="col">userName</th>
                                 <th scope="col">Phone No</th>
                                 <th scope="col">Email id</th>
                                 <th scope="col">Gender</th>
-                                <th scope="col">username</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-
                             {x.map((d) => {
                                 return (
                                     <tr>
                                         <th scope="row">101</th>
-                                        <td>Mark</td>
                                         <td>{d.username}</td>
-                                        <td>{d.phoneno}</td>
+                                        <td>{d.phone}</td>
                                         <td>{d.email}</td>
                                         <td>{d.gender}</td>
-                                        <td>{d.loginuser}</td>
                                         <td>
-                                            <Link to="" className='btn btn-danger btn-sm'>View</Link>
-                                            <Link to="" className='btn btn-danger btn-sm'>Edit</Link>
-                                            <Link to="" className='btn btn-danger btn-sm'>Del</Link>
+                                            <Link to={`view/`+d.id} className='btn btn-success btn-sm'>View</Link>
+                                            <Link to={`edit/` + d.id} className='btn btn-info btn-sm ms-2'>Edit</Link>
+                                            <Link to="" className='btn btn-danger btn-sm ms-2'>Del</Link>
                                         </td>
                                     </tr>
                                 )
                             })}
-
-
-
                         </tbody>
                     </table>
 

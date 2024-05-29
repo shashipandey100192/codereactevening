@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 
 
-function Myregistor() {
-    const mynav = useNavigate()
+function Myeditpage() {
+    const mynav = useNavigate();
+    const {id} = useParams();
 
     const [fld,setfld]=useState({
         username:"",
@@ -16,13 +17,23 @@ function Myregistor() {
         repass:""
     })
 
+    const singlerecord = ()=>{
+        axios.get(`http://localhost:5500/users/${id}`).then((d)=>{
+            setfld(d.data);
+        })
+    }
+useEffect(()=>{
+    singlerecord();
+},[]);
+
+
     const  myformsumit = (e)=>{
         e.preventDefault();
         console.log(fld);
-        axios.post('http://localhost:5500/users',fld).then((g)=>{
+        axios.put(`http://localhost:5500/users/${id}`,fld).then((g)=>{
             console.log(g);
         });
-        mynav("/")
+        mynav("/landing")
 
     }
 
@@ -62,7 +73,7 @@ function Myregistor() {
                 </div>
                 <div class="mb-3">
                     <label  class="form-label">Gender</label>
-                  <select className='form-control' name='gender' value={fld.gender} onChange={setdata}> 
+                  <select className='form-control' name='gender' value={fld.gender} onInput={setdata}> 
                     <option>Male</option>
                     <option>Female</option>
                     <option>Other</option>
@@ -78,9 +89,9 @@ function Myregistor() {
                     <input type="password" class="form-control" placeholder='password' name='repass' value={fld.repass} onInput={setdata}/>
                 </div>
                 <div class="mb-3">
-                    <input type='submit' className='btn btn-success ms-4' value="submit"/>
-                    <input type='reset' className='btn btn-danger ms-5' value="cancel"/>
-                    <Link to='/' className='ms-5'>User Login</Link>
+                    <input type='submit' className='btn btn-success ms-4' value="update"/>
+                   
+                    
                 </div>
         </div>
         </div>
@@ -89,4 +100,4 @@ function Myregistor() {
   )
 }
 
-export default Myregistor
+export default Myeditpage

@@ -16,6 +16,8 @@ import Myaxiosapi from './modules/dashboard/services/Myaxiosapi';
 import Mychartpage from './modules/dashboard/Mychart';
 import Productdetails from './modules/dashboard/services/Productdetails';
 import Myerropage from './modules/dashboard/Myerropage';
+import Myeditpage from './modules/auth/Myeditpage';
+import Mydetails from './modules/auth/Mydetails';
 // import Mylazylodingpage from './modules/dashboard/Mylazylodingpage';
 const Mylazylodingpage = lazy(()=>import('./modules/dashboard/Mylazylodingpage'));
 
@@ -36,6 +38,8 @@ root.render(
         <Route path='landing' element={<Mylanding/>}>
             <Route path='' element={<Myhome/>}></Route>
             <Route path='about' element={<Myabout/>}></Route>
+            <Route path='edit/:id' element={<Myeditpage/>}></Route>
+            <Route path='view/:id' element={<Mydetails/>}></Route>
             <Route path='myservice' element={<Myservicedashboard/>}>
                 <Route path='' element={<Myemp/>}/>
                 <Route path='allemp' element={<Myfetchfunc/>}/>

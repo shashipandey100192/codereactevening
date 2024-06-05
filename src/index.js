@@ -19,6 +19,8 @@ import Myerropage from './modules/dashboard/Myerropage';
 import Myeditpage from './modules/auth/Myeditpage';
 import Mydetails from './modules/auth/Mydetails';
 import Myreduxlandingpage from './modules/dashboard/reduxpage/Myreduxlandingpage';
+import { Provider } from 'react-redux';
+import { store } from './modules/dashboard/reduxpage/Mystore';
 // import Mylazylodingpage from './modules/dashboard/Mylazylodingpage';
 const Mylazylodingpage = lazy(()=>import('./modules/dashboard/Mylazylodingpage'));
 
@@ -32,6 +34,7 @@ const Mylazylodingpage = lazy(()=>import('./modules/dashboard/Mylazylodingpage')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
      <BrowserRouter>
       <Routes>
         <Route path='' element={<Mylogin/>}></Route>
@@ -57,7 +60,7 @@ root.render(
         <Route path='*' element={<Myerropage/>}/>
       </Routes>
      </BrowserRouter>
-      
+     </Provider>
     
   </React.StrictMode>
 );

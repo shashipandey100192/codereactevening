@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Mycard from './Mycard';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 function Myhome() {
+    const {id} = useParams();
 
     const [x, y] = useState([]);
 
@@ -18,6 +19,14 @@ function Myhome() {
     useEffect(() => {
         myjsondata();
     }, [])
+
+    const mydel =(id)=>{
+        axios.delete('http://localhost:5500/users/'+id).then((d) => {
+            console.log(d)
+            myjsondata();
+        })
+
+    }
 
 
     return (
@@ -96,7 +105,7 @@ function Myhome() {
                                         <td>
                                             <Link to={`view/`+d.id} className='btn btn-success btn-sm'>View</Link>
                                             <Link to={`edit/` + d.id} className='btn btn-info btn-sm ms-2'>Edit</Link>
-                                            <Link to="" className='btn btn-danger btn-sm ms-2'>Del</Link>
+                                            <button className='btn btn-danger btn-sm ms-2' onClick={()=> mydel(d.id)}>Del</button>
                                         </td>
                                     </tr>
                                 )

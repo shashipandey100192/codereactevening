@@ -1,51 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "username": "kumaoooooooo",
-      "email": "kumar@gmail.com",
-      "phoneno": "454545454",
-      "gender": "mail",
-      "loginuser": "kumar123",
-      "loginpass": "123456"
-    },
-    {
-      "id": "2",
-      "username": "kumar",
-      "email": "kumar@gmail.com",
-      "phoneno": "454545454",
-      "gender": "mail",
-      "loginuser": "kumar123",
-      "loginpass": "123456"
-    },
-    {
-      "id": "3",
-      "username": "kumar",
-      "email": "kumar@gmail.com",
-      "phoneno": "454545454",
-      "gender": "mail",
-      "loginuser": "kumar123",
-      "loginpass": "123456"
-    },
-    {
-      "id": "4",
-      "username": "kumar",
-      "email": "kumar@gmail.com",
-      "phoneno": "454545454",
-      "gender": "mail",
-      "loginuser": "kumar123",
-      "loginpass": "123456"
-    },
-    {
-      "id": "5",
-      "username": "kumar",
-      "email": "kumar@gmail.com",
-      "phoneno": "454545454",
-      "gender": "mail",
-      "loginuser": "kumar123",
-      "loginpass": "123456"
-    },
-    {
       "id": "1c7e",
       "username": "ravi",
       "phone": "888888888",
@@ -53,24 +8,6 @@
       "gender": "Female",
       "pass": "444444444",
       "repass": "4444444"
-    },
-    {
-      "id": "6b49",
-      "username": "ravi",
-      "phone": "",
-      "email": "",
-      "gender": "",
-      "pass": "",
-      "repass": ""
-    },
-    {
-      "id": "9cec",
-      "username": "ravi",
-      "phone": "",
-      "email": "",
-      "gender": "",
-      "pass": "",
-      "repass": ""
     },
     {
       "id": "14aa",
@@ -91,40 +28,13 @@
       "repass": "1234"
     },
     {
-      "id": "5c86",
-      "username": "",
-      "phone": "",
-      "email": "",
-      "gender": "",
-      "pass": "",
-      "repass": ""
-    },
-    {
-      "id": "e25e",
-      "username": "",
-      "phone": "",
-      "email": "",
-      "gender": "",
-      "pass": "",
-      "repass": ""
-    },
-    {
-      "id": "0764",
-      "username": "",
-      "phone": "",
-      "email": "",
-      "gender": "",
-      "pass": "",
-      "repass": ""
-    },
-    {
-      "id": "2603",
-      "username": "",
-      "phone": "",
-      "email": "",
-      "gender": "",
-      "pass": "",
-      "repass": ""
+      "id": "7111",
+      "username": "rambabuooooo",
+      "phone": "7777777777",
+      "email": "ambabu@gamail.com",
+      "gender": "Other",
+      "pass": "123456",
+      "repass": "123456"
     }
   ]
 }

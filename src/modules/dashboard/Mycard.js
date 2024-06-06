@@ -1,11 +1,19 @@
 import React, { useState } from 'react'
 import { FaRegUser } from "react-icons/fa";
 import { FcApproval } from "react-icons/fc";
+import { useDispatch } from 'react-redux';
+import { cardvalue } from './reduxpage/Customaction';
 const myimg ="https://static.vecteezy.com/system/resources/thumbnails/025/067/762/small_2x/4k-beautiful-colorful-abstract-wallpaper-photo.jpg";
 
 const a = "Card Title:";
-
 function Mycard() {
+
+
+    
+    const dispatch = useDispatch()
+   
+
+
 const [x,y]=useState("this is card type")   
 
 const  myfunc = ()=>{
@@ -22,6 +30,7 @@ const  myfunc = ()=>{
                     <p className="card-text">{x}</p>
                     <a href="#" className="btn btn-primary btn-sm"> <FaRegUser />Go{10+20}</a>
                     <input type='button' value="message" className='btn btn-sm btn-warning ms-2' onClick={myfunc}/>
+                    <button type='button' className='btn btn-danger btn-sm' onClick={() => dispatch(cardvalue())}>add to card</button>
                 </div>
             </div>
         </div>
